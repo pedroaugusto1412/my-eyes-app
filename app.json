@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "My Eyes",
+    "slug": "my-eyes",
+    "scheme": "myeyes",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O My Eyes precisa acessar suas fotos para adicionar a foto do pet.",
+          "cameraPermission": "O My Eyes precisa da câmera para fotografar o pet."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "my-eyes-reminders"
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "O My Eyes precisa do microfone para gravar áudios personalizados.",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.myeyes.app",
+      "permissions": [
+        "POST_NOTIFICATIONS",
+        "VIBRATE"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
